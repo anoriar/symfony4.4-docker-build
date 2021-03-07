@@ -6,7 +6,7 @@ services:
     container_name: ${PROJECT}_nginx
     volumes:
       - ./images/nginx/hosts:/etc/nginx/conf.d
-      - ./images/nginx/logs:/var/log/nginx
+      - ./data/nginx/logs:/var/log/nginx
     ports:
       - "${DOCKER}:80:80"
       - "${DOCKER}:443:443"
@@ -27,7 +27,7 @@ services:
     container_name: ${PROJECT}_mysql
     volumes:
       - ./images/mysql/etc/mysql:/etc/mysql
-      - ./data/db:/var/lib/mysql
+      - ./data/mysql:/var/lib/mysql
     ports:
       - "${DOCKER}:3306:3306"
     environment:
