@@ -18,6 +18,11 @@ services:
     build:
       context: images/php-fpm
       dockerfile: Dockerfile
+    environment:
+      DB_ROOT_PASSWORD: ${DB_PASSWORD}
+      DB_NAME: ${DB_NAME}
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
     links:
       - mysql
     volumes:
