@@ -14,7 +14,7 @@ services:
       - php-fpm
 
   php-fpm:
-    container_name: ${PROJECT}_backend
+    container_name: ${PROJECT}_php-fpm
     build:
       context: images/php-fpm
       dockerfile: Dockerfile
