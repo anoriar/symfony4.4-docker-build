@@ -10,4 +10,4 @@ sudo chown $UID:$GID .
 
 docker-compose up -d nginx php-fpm mysql redis
 
-docker exec -it -e COMPOSER_MEMORY_LIMIT=-1 my-project_php-fpm composer install --no-interaction --optimize-autoloader --prefer-dist
+docker-compose exec php-fpm composer install --no-interaction --optimize-autoloader --prefer-dist
