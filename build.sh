@@ -8,6 +8,6 @@ sudo rm -rf ./.docker/data/mysql
 sudo rm -rf ./src/var/cache/*
 sudo chown $UID:$GID .
 
-docker-compose up -d nginx php-fpm mysql redis
+docker-compose up -d server backend db redis
 
-docker-compose exec php-fpm composer install --no-interaction --optimize-autoloader --prefer-dist
+docker-compose exec backend composer install --no-interaction --optimize-autoloader --prefer-dist
